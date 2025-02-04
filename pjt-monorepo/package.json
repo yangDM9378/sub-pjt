@@ -1,0 +1,19 @@
+{
+  "name": "pjt-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^2.4.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.1.5"
+  }
+}
