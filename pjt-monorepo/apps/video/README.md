@@ -14,6 +14,10 @@
 
 Python / Flask / TypeScript / React / SQLite
 
+## 사용 라이브러리
+
+Emotion
+
 ## 개발 진행 방향
 
 (아래의 내용을 기반으로 개발을 진행하고 개발 진행 중 변경이 필요한 경우 변경하여 진행할 예정)
