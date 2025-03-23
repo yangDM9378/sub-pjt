@@ -5,9 +5,13 @@ const app = express();
 const PORT = 3000;
 
 app.use("/test", express.static(path.join(__dirname, "../../dist/test")));
+app.use("/video", express.static(path.join(__dirname, "../../dist/video")));
 
 app.get("/test/*", (req, res) => {
   res.sendFile(path.join(__dirname, "../../dist/test/index.html"));
+});
+app.get("/video/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../dist/video/index.html"));
 });
 
 app.get("/", (req, res) => {

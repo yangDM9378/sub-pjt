@@ -8,12 +8,14 @@
 
 0. Sub PJT 용 Mono Repo 구조 설계
 
-   - /pjt-monorepo/apps/test
+   - [test pjt](https://github.com/yangDM9378/sub-pjt/tree/app/video/pjt-monorepo/apps/test) - /pjt-monorepo/apps/test
    - monorepo 라우팅 구조 설계 및 이해
+   - :3000/test
 
 1. 영상 파일 재생 화면 개발 프로젝트
-   - /pjt-monorepo/apps/video
-   - [README.md](https://github.com/yangDM9378/sub-pjt/pjt-monorepo/apps/video)
+   - [video pjt](https://github.com/yangDM9378/sub-pjt/tree/app/video/pjt-monorepo/apps/video) - /pjt-monorepo/apps/video
+   - [README.md](https://github.com/yangDM9378/sub-pjt/blob/app/video/README.md)
+   - :3000/video
 
 ### 실행 방법
 
