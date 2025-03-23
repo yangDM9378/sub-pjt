@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# 영상 파일 재생 화면 개발 프로젝트 기획
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 개요
 
-Currently, two official plugins are available:
+원격 접속(RDP) 접속 시 사용자가 작업한 내용을 녹화하고 특정 시간에 웹서버로 녹화 파일을 전송하여 웹 서버에서 녹화 파일을 재생하는 기능을 구현하기 위한 화면 개발 단계이다. 따라서 해당 PJT는 **웹서버에 저장된 영상 파일을 재생하는 화면 개발하는 PJT**이다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 주의사항
 
-## Expanding the ESLint configuration
+- 녹화된 원격 접속(RDP)가 일어난 서버의 영상은 웹이 실행되고 있는 서버로 파일이 옮겨져 있다고 가정
+- 영상 녹화가 완료 될 때 DB에 녹화 영상에 대한 정보를 저장하였다고 가정
+- 웹 서버에 이동된 녹화 영상을 재생하는 화면을 개발하는 것이 목적
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 개발 환경
 
-- Configure the top-level `parserOptions` property like this:
+Python / Flask / TypeScript / React / SQLite
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 개발 진행 방향
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+(아래의 내용을 기반으로 개발을 진행하고 개발 진행 중 변경이 필요한 경우 변경하여 진행할 예정)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- 녹화된 파일 및 녹화 정보 웹서버의 특정 폴더 및 DB에 저장 (더미 데이터 생성)
+- 녹화 영상 리스트 및 녹화 영상 재생 화면 개발
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 기능
+
+1. 녹화 영상 정보 리스트 (일자별)
+
+   - 웹 서버 전송 완료된 녹화 파일 리스트
+   - 웹 서버 전송 전인 녹화 파일 리스트
+
+2. 녹화 영상 재생
+
+   - 웹 서버 전송 완료된 녹화 재생
+   - 웹 서버 전송 전인 녹화 재생
