@@ -3,12 +3,12 @@ export type VideoFile = {
 }
 export const dummyVideos: VideoFile[] = [
   {
-    path: 'DM/20250323/1744.mp4',
+    path: 'DM/20250323/1744.webm',
   },
   {
-    path: 'DM/20250323/1800.mp4',
+    path: 'DM/20250323/1800.webm',
   },
   {
-    path: 'DM/20250323/1877.mp4',
+    path: 'DM/20250323/1877.webm',
   }
 ]

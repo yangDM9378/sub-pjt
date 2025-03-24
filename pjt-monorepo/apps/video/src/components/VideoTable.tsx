@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-import React from 'react';
+// import { css } from '@emotion/react';
 import { VideoFile } from '../data/dummyVideos';
 
 type Props = {
@@ -16,7 +15,9 @@ export default function VideoTable({videos, onSelect}:Props) {
   return (
     <table>
       <thead>
-        <tr>파일 경로</tr>
+        <tr>
+          <th>파일 경로</th>
+          </tr>
       </thead>
       <tbody>
         {videos.map((video, idx) => (
